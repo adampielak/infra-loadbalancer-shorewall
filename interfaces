@@ -1,0 +1,7 @@
+# For information about entries in this file, type "man shorewall-interfaces"
+###############################################################################
+# FORMAT 2 : The BROADCAST column is omitted.
+?FORMAT 2
+###############################################################################
+#ZONE   INTERFACE       OPTIONS
+pub     eth0            dhcp,tcpflags,nosmurfs,routefilter,logmartians,sourceroute=0

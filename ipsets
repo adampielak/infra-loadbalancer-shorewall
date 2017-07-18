@@ -1,0 +1,12 @@
+create pri hash:net family inet hashsize 1024 maxelem 65536
+add pri 172.31.16.0/20
+add pri 172.31.32.0/20
+create pub hash:net family inet hashsize 1024 maxelem 65536
+add pub 172.31.64.0/20
+create as hash:net family inet hashsize 1024 maxelem 65536
+add as 172.31.48.0/20
+create sgw hash:net family inet hashsize 1024 maxelem 65536
+add sgw 172.31.80.0/26
+create bo hash:net family inet hashsize 1024 maxelem 65536
+add bo 172.31.0.0/20
+

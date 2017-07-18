@@ -1,0 +1,16 @@
+# For information about entries in this file, type "man shorewall-masq"
+################################################################################################################
+#INTERFACE:DEST         SOURCE          ADDRESS         PROTO   PORT(S) IPSEC   MARK    USER/   SWITCH  ORIGINAL
+#                                                                                       GROUP           DEST
+#
+#       Enable port masquerading for outgoing HTTP/HTTPS/SSL/TLS connections (Mongo Automation git ssl, agt-get, etc.), 
+eth0                    +bo,+pri,+as    -               tcp     80,443
+
+#       Enable port masquerading for outgoing SMTP connections (sendgrid used by loopback)
+eth0                    +bo,+as         -               tcp     587
+
+#       Enable port masquerading for outgoing SSH connections (git ssh)
+eth0                    +bo,+pri,+as    -               tcp     22
+
+#       Enable port masquerading for outgoing NTP requests connections
+#eth0                   +bo,+pri,+as    -               udp     123
